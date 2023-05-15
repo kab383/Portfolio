@@ -2,7 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@400;700&display=swap');
 
-/* Common Styles */
+
 *{
   margin: 0;
   padding: 0;
@@ -17,7 +17,53 @@ html {
   font-size: 62.5%;
 }
 
-/* End of Common Styles */
+.mouse-circle,
+.mouse-dot {
+  border-radius: 50%;
+  position: fixed;
+  z-index: 300;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+.mouse-circle {
+  width: 6rem;
+  height: 6rem;
+  border: .1rem solid #39FF14;
+  border-radius: 50%;
+  position: fixed;
+  z-index: 300;
+  animation: mouseCircleAnimation 10s infinite linear;
+}
+
+@keyframes mouseCircleAnimation {
+  0% {
+    width: 6rem;
+    height: 6rem;
+  }
+  25% {
+    width: 8rem;
+    height: 8rem;
+  }
+  35% {
+    width: 4rem;
+    height: 4rem;
+  }
+  70% {
+    width: 8rem;
+    height: 8rem;
+  }
+  100% {
+    width: 6rem;
+    height: 6rem;
+  }
+}
+
+.mouse-dot {
+  width: .5rem;
+  height: .5rem;
+  background-color: black;
+}
 
 .page-bg {
   position: fixed;
