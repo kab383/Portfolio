@@ -183,3 +183,12 @@ html {
 .featured-text-2 {
   margin: 0 10rem 0 auto;
 }
+
+.spacer-dot {
+  width: 6px;
+  height: 6px;
+  background-color: #39FF14;
+  border-radius: 50%;
+  opacity: 50%;
+  margin: 0 .4rem;
+}
