@@ -30,6 +30,7 @@ html {
   z-index: 300;
   transform: translate(-50%, -50%);
   opacity: 0;
+  pointer-events: none;
 }
 
 .mouse-circle {
@@ -148,23 +149,30 @@ html {
   font-size: 2.5rem;
 }
 
-.circle-1 {
+.circle-1,
+.circle-2,
+.circle-3,
+.circle-4 {
   position: relative;
 }
 
-.circle-1:hover .circle-1-hidden-text {
+.circle-1:hover .circle-1-hidden-text,
+.circle-2:hover .circle-2-hidden-text,
+.circle-3:hover .circle-3-hidden-text,
+.circle-4:hover .circle-4-hidden-text {
   display: block;
 }
 
-.circle-1-hidden-text {
+.circle-1-hidden-text,
+.circle-2-hidden-text,
+.circle-3-hidden-text,
+.circle-4-hidden-text {
   display: none;
-  position: absolute;
+  /* position: absolute; */
   top: 100%;
   left: 0;
-  background-color: #F9F9F9;
   padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  z-index: -1;
 }
 
 .featured-text {
@@ -189,6 +197,6 @@ html {
   height: 6px;
   background-color: #39FF14;
   border-radius: 50%;
-  opacity: 50%;
+  opacity: 30%;
   margin: 0 .4rem;
 }
