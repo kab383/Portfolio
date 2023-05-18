@@ -45,7 +45,7 @@ mainBtn.addEventListener('mouseleave', () => {
 // About Me section
 
 const aboutMeText = document.querySelector('.about-me-text');
-const aboutMeTextContent = "As a web developer, I combine creativity with technical expertise to craft immersive online experiences. With a sharp eye for design and a passion for coding, I seamlessly blend aesthetics and functionality, delivering captivating websites that leave a lasting impression.";
+const aboutMeTextContent = "As a web developer, I combine creativity with technical expertise to craft immersive online experiences. With a sharp eye for design and a passion for coding, I seamlessly blend aesthetics and functionality, delivering captivating applications that leave a lasting impression.";
 
 Array.from(aboutMeTextContent).forEach(char => {
   const span = document.createElement('span');
