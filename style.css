@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway+Dots&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@400;700&display=swap');
 
@@ -34,8 +34,8 @@ html {
 }
 
 .mouse-circle {
-  width: 6rem;
-  height: 6rem;
+  width: 4rem;
+  height: 4rem;
   border: .1rem solid #39FF14;
   border-radius: 50%;
   position: fixed;
@@ -45,24 +45,24 @@ html {
 
 @keyframes mouseCircleAnimation {
   0% {
-    width: 6rem;
-    height: 6rem;
-  }
-  25% {
-    width: 8rem;
-    height: 8rem;
-  }
-  35% {
     width: 4rem;
     height: 4rem;
   }
-  70% {
-    width: 8rem;
-    height: 8rem;
-  }
-  100% {
+  25% {
     width: 6rem;
     height: 6rem;
+  }
+  35% {
+    width: 2rem;
+    height: 2rem;
+  }
+  70% {
+    width: 6rem;
+    height: 6rem;
+  }
+  100% {
+    width: 4rem;
+    height: 4rem;
   }
 }
 
@@ -114,7 +114,7 @@ html {
   background-color: black;
   align-self: center;
   justify-self: center;
-  border-radius: 50%;
+  /* border-radius: 25%; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -122,6 +122,7 @@ html {
   opacity: 60%;
   border: 0.1rem dotted #39FF14;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.9);
+  font-family: "Open Sans";
 }
 
 .circle-text {
@@ -139,6 +140,7 @@ html {
   background-color: black;
   opacity: 60%;
   border: 0.1rem dotted #39FF14;
+  border-radius: 50%;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, .9);
 }
 
@@ -147,6 +149,7 @@ html {
   z-index: 2;
   color: white;
   font-size: 2.5rem;
+  font-family: "Open Sans";
 }
 
 .circle-1,
@@ -173,6 +176,7 @@ html {
   left: 0;
   padding: 8px;
   z-index: -1;
+  font-family: "Open Sans";
 }
 
 .featured-text {
@@ -280,5 +284,45 @@ html {
   100% {
     width: 210%;
     height: 210%;
+  }
+}
+
+/* About Me styling */
+
+.section-2 {
+  position: relative;
+  padding: 10rem 10rem 15rem 10rem;
+}
+
+.about-me-text span {
+  width: 90%;
+  margin: auto;
+  font-family: "Open Sans";
+  font-size: 12rem;
+  font-weight: bold;
+  letter-spacing: 0.5rem;
+  line-height: 1.05;
+  position: relative;
+  mix-blend-mode: color-dodge;
+}
+
+.highlight {
+  font-family: "Open Sans";
+  color: #39FF14;
+}
+
+@keyframes aboutMeTextAnimation {
+  0% {
+    color: #aaa;
+    top: 0;
+  }
+  10%,
+  90% {
+    color:  #39FF14;
+    top: 2rem;
+  }
+  100% {
+    color: #aaa;
+    top: 0;
   }
 }
