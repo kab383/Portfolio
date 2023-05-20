@@ -58,3 +58,4 @@ Array.from(aboutMeTextContent).forEach(char => {
     e.target.style.animation = "aboutMeTextAnimation 10s infinite";
   });
 });
+
