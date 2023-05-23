@@ -55,7 +55,7 @@ Array.from(aboutMeTextContent).forEach(char => {
   aboutMeText.appendChild(span)
 
   span.addEventListener('mouseenter', (e) => {
-    e.target.style.animation = "aboutMeTextAnimation 10s infinite";
+    e.target.style.animation = 'aboutMeTextAnimation 10s infinite';
   });
 });
 
@@ -63,6 +63,7 @@ Array.from(aboutMeTextContent).forEach(char => {
 
 const container = document.querySelector('.container')
 const projects = document.querySelectorAll('.project');
+const projectHideBtn = document.querySelector('.project-hide-btn');
 
 projects.forEach(project => {
   project.addEventListener('mouseenter', () => {
@@ -79,12 +80,20 @@ projects.forEach(project => {
     container.appendChild(largeImgWrapper);
 
     const largeImg = document.createElement('img')
-    largeImg.className = "project-img";
+    largeImg.className = 'project-img';
 
-    const imgPath = project.firstElementChild.getAttribute("src").split(".")[0];
-    largeImg.setAttribute("src", `${imgPath}-big.jpg`);
-    // largeImg.setAttribute("src", "images/projects/sorting-hat.jpg");
+    const imgPath = project.firstElementChild.getAttribute('src').split('.')[0];
+    largeImg.setAttribute('src', `${imgPath}-big.jpg`);
     largeImgWrapper.appendChild(largeImg);
+    document.body.style.overflowY = 'hidden';
+
+    projectHideBtn.classList.add('change');
+
+    projectHideBtn.onclick = () => {
+      projectHideBtn.classList.remove('change');
+      largeImgWrapper.remove();
+      document.body.style.overflowY = 'scroll';
+    }
   });
 
 });
