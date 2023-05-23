@@ -97,3 +97,12 @@ projects.forEach(project => {
   });
 
 });
+
+document.querySelectorAll('.expertise-btn').forEach((expertise) => {
+  expertise.addEventListener('click', e => {
+    e.preventDefault();
+
+    const expertiseText = expertise.nextElementSibling;
+    expertiseText.classList.toggle('change');
+  });
+});
