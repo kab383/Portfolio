@@ -61,6 +61,7 @@ Array.from(aboutMeTextContent).forEach(char => {
 
 // Project section
 
+const container = document.querySelector('.container')
 const projects = document.querySelectorAll('.project');
 
 projects.forEach(project => {
@@ -70,5 +71,20 @@ projects.forEach(project => {
 
   project.addEventListener('mouseleave', () => {
     project.firstElementChild.style.top = "2rem";
-  })
+  });
+
+  project.addEventListener('click', () => {
+    const largeImgWrapper = document.createElement('div');
+    largeImgWrapper.className = "project-img-wrapper";
+    container.appendChild(largeImgWrapper);
+
+    const largeImg = document.createElement('img')
+    largeImg.className = "project-img";
+
+    const imgPath = project.firstElementChild.getAttribute("src").split(".")[0];
+    largeImg.setAttribute("src", `${imgPath}-big.jpg`);
+    // largeImg.setAttribute("src", "images/projects/sorting-hat.jpg");
+    largeImgWrapper.appendChild(largeImg);
+  });
+
 });
