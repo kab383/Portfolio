@@ -104,5 +104,10 @@ document.querySelectorAll('.expertise-btn').forEach((expertise) => {
 
     const expertiseText = expertise.nextElementSibling;
     expertiseText.classList.toggle('change');
+
+    const rightPosition = expertiseText.classList.contains
+    ('change') ? `calc(100% - ${getComputedStyle(expertise.firstElementChild).width})` : 0;
+
+    expertise.firstElementChild.style.right = rightPosition;
   });
 });
