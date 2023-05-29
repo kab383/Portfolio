@@ -661,3 +661,48 @@ html {
   opacity: 1;
   transition: height 0.5s, opacity 0.5s 0.5s;
 }
+
+.section-5 {
+  position: relative;
+  height: 100vh;
+}
+
+.form-heading {
+  font-family: "Open Sans", sans-serif;
+  font-size: 6rem;
+  font-weight: 400;
+  color: black;
+  letter-spacing: 0.3rem;
+  margin-bottom: 3rem;
+}
+
+.contact-form {
+  flex-direction: column;
+}
+
+.contact-form-input {
+  width: 60rem;
+  padding: 0.5rem;
+  margin: 1rem 0;
+  background-color: #aaa;
+  border: 0.1rem solid black;
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 0.1rem;
+  height: 5rem;
+}
+
+.contact-form-textarea {
+  height: 20rem;
+  resize: none;
+}
+
+.form-submit-btn {
+  width: 20rem;
+  height: 5rem;
+  background-color: #aaa;
+  align-self: flex-start;
+  font-size: 1.8rem;
+  color:black;
+}
