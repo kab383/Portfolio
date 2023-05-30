@@ -674,6 +674,7 @@ html {
   color: black;
   letter-spacing: 0.3rem;
   margin-bottom: 3rem;
+  transition: opacity 0.3s;
 }
 
 .contact-form {

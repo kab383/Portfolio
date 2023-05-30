@@ -111,3 +111,23 @@ document.querySelectorAll('.expertise-btn').forEach((expertise) => {
     expertise.firstElementChild.style.right = rightPosition;
   });
 });
+
+const formHeading = document.querySelector('.form-heading');
+const formInputs = document.querySelectorAll('.contact-form-input');
+
+formInputs.forEach(input => {
+  input.addEventListener('focus', () => {
+    formHeading.style.opacity = '0';
+    setTimeout(() => {
+      formHeading.textContent = `Your ${input.placeholder}`;
+      formHeading.style.opacity = '1'
+    }, 300);
+  });
+  input.addEventListener('blur', () => {
+    formHeading.style.opacity = '0';
+    setTimeout(() => {
+      formHeading.textContent = 'Contact Me';
+      formHeading.style.opacity = '1'
+    }, 300);
+  });
+});
