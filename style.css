@@ -707,3 +707,16 @@ html {
   font-size: 1.8rem;
   color:black;
 }
+
+.socials {
+  display: flex;
+  width: 50rem;
+}
+
+.social-link {
+  width: 20%;
+}
+
+.social-link img {
+  width: 100%;
+}
