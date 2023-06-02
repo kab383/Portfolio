@@ -665,6 +665,7 @@ html {
 .section-5 {
   position: relative;
   height: 100vh;
+  flex-direction: column;
 }
 
 .form-heading {
@@ -711,12 +712,15 @@ html {
 .socials {
   display: flex;
   width: 50rem;
+  margin-top: 4rem;
+  padding: 0 12rem;
 }
 
 .social-link {
-  width: 20%;
+  width: 50%;
 }
 
 .social-link img {
   width: 100%;
+  padding: 0 1rem;
 }
