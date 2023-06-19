@@ -44,6 +44,16 @@ mainBtns.forEach(btn => {
   });
 })
 
+// Navigation
+
+const menuIcon = document.querySelector('.menu-icon');
+const navbar = document.querySelector('.navbar');
+
+document.addEventListener('scroll', () => {
+  menuIcon.classList.add('show-menu-icon')
+  navbar.classList.add('hide-navbar')
+})
+
 // About Me section
 
 const aboutMeText = document.querySelector('.about-me-text');
