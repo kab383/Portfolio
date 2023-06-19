@@ -173,6 +173,18 @@ html {
   z-index: 5;
 }
 
+.navbar-link {
+  font-family: "Open Sans";
+  font-size: 1.7rem;
+  font-weight: 1000;
+  margin: 0 2.5rem;
+  color: black;
+}
+
+.navbar-link:hover {
+  color:#39FF14;
+}
+
 .section-1 {
   display: flex;
   position: relative;
