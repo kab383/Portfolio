@@ -59,6 +59,11 @@ document.addEventListener('scroll', () => {
   }
 });
 
+menuIcon.addEventListener('click', () => {
+  menuIcon.classList.remove('show-menu-icon');
+  navbar.classList.remove('hide-navbar');
+});
+
 // About Me section
 
 const aboutMeText = document.querySelector('.about-me-text');
