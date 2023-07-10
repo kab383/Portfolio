@@ -28,6 +28,7 @@ mainBtns.forEach(btn => {
   let ripple;
 
   btn.addEventListener('mouseenter', (e) => {
+
     const left = e.clientX - e.target.getBoundingClientRect().left;
     const top = e.clientY - e.target.getBoundingClientRect().top;
   
@@ -64,13 +65,32 @@ menuIcon.addEventListener('click', () => {
   navbar.classList.remove('hide-navbar');
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+
+  const navbarLinks = document.querySelectorAll('.navbar-link');
+  
+  navbarLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      
+      const targetSection = document.querySelector(link.getAttribute('href'));
+      
+      targetSection.scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
+});
+
 // About Me section
 
 const aboutMeText = document.querySelector('.about-me-text');
 const aboutMeTextContent = "As a web developer, I combine creativity with technical expertise to craft immersive online experiences. With a sharp eye for design and a passion for coding, I seamlessly blend aesthetics and functionality, delivering captivating applications that leave a lasting impression.";
 
 Array.from(aboutMeTextContent).forEach(char => {
+
   const span = document.createElement('span');
+
   span.textContent = char;
   aboutMeText.appendChild(span)
 
@@ -95,14 +115,17 @@ projects.forEach(project => {
   });
 
   project.addEventListener('click', () => {
+
     const largeImgWrapper = document.createElement('div');
+
     largeImgWrapper.className = "project-img-wrapper";
     container.appendChild(largeImgWrapper);
 
-    const largeImg = document.createElement('img')
+    const largeImg = document.createElement('img');
     largeImg.className = 'project-img';
 
     const imgPath = project.firstElementChild.getAttribute('src').split('.')[0];
+
     largeImg.setAttribute('src', `${imgPath}-big.jpg`);
     largeImgWrapper.appendChild(largeImg);
     document.body.style.overflowY = 'hidden';
@@ -123,6 +146,7 @@ document.querySelectorAll('.expertise-btn').forEach((expertise) => {
     e.preventDefault();
 
     const expertiseText = expertise.nextElementSibling;
+    
     expertiseText.classList.toggle('change');
 
     const rightPosition = expertiseText.classList.contains
