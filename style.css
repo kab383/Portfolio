@@ -197,7 +197,7 @@ html {
   background-color: white;
 }
 
-.progress-bar:hover
+/* .progress-bar:hover
 .half-circle-top {
   opacity: 0;
   transition: opacity 0s 1s;
@@ -213,7 +213,7 @@ transition: transform 1s linear;
 .half-circle:nth-child(2) {
   transform: rotate(360deg);
   transition: transform 2s linear;
-}
+} */
 
 .progress-bar-circle {
   width: 7.8rem;

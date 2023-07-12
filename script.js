@@ -53,6 +53,10 @@ const progressBarCircle = document.querySelector('.progress-bar-circle');
 
 const progressBarFn = () => {
 
+  const sections = document.querySelectorAll('section')
+
+  const progressBar = document.querySelector('.progress-bar')
+
   const pageViewportHeight = window.innerHeight;
   const pageHeight = document.documentElement.scrollHeight;
   const scrolledPortion = window.pageYOffset;
@@ -70,7 +74,19 @@ const progressBarFn = () => {
       halfCircleTop.style.opacity = '1';
     };
   });
+
+progressBar.onclick = (e) => {
+  e.preventDefault();
+
+  const sectionPositions = Array.from(sections).map((section) =>
+    scrolledPortion + section.getBoundingClientRect().top);
+
+    window.scrollTo(0,5039)
+
+  };
 };
+
+
 
 // Navigation
 
