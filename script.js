@@ -52,15 +52,12 @@ const halfCircleTop = document.querySelector('.half-circle-top');
 const progressBarCircle = document.querySelector('.progress-bar-circle');
 
 const progressBarFn = () => {
-
+  
   const sections = document.querySelectorAll('section')
-
   const progressBar = document.querySelector('.progress-bar')
-
+  let pageHeight = document.documentElement.scrollHeight;
+  let scrolledPortion = window.pageYOffset;
   const pageViewportHeight = window.innerHeight;
-  const pageHeight = document.documentElement.scrollHeight;
-  const scrolledPortion = window.pageYOffset;
-
   const scrolledPortionDegree = (scrolledPortion / (pageHeight - pageViewportHeight)) * 360;
 
   halfCircles.forEach(el => {
@@ -95,7 +92,7 @@ progressBar.onclick = (e) => {
     progressBarCircle.style.transform = 'rotate(180deg)';
   } else {
     progressBarCircle.style.transform = 'rotate(0)';
-  }
+  };
 
 };
 
@@ -179,12 +176,15 @@ projects.forEach(project => {
 
     const largeImg = document.createElement('img');
     largeImg.className = 'project-img';
-
     const imgPath = project.firstElementChild.getAttribute('src').split('.')[0];
 
     largeImg.setAttribute('src', `${imgPath}-big.jpg`);
     largeImgWrapper.appendChild(largeImg);
     document.body.style.overflowY = 'hidden';
+
+    largeImgWrapper.onscroll = () => {
+      progressBarFn(largeImgWrapper);
+    }
 
     projectHideBtn.classList.add('change');
 
