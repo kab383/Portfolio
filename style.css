@@ -223,6 +223,7 @@ transition: transform 1s linear;
   color: white;
   font-size: 4rem;
   z-index: 10;
+  transition: transform 0.5s;
 }
 
 .menu-icon {
